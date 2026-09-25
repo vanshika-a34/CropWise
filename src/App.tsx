@@ -14,12 +14,12 @@ import WeatherCenter from './pages/WeatherCenter';
 import { SmartPlannerDashboard } from './features/smart-planner/pages/SmartPlannerDashboard';
 import { LanguageProvider as UpstreamLanguageProvider } from './context/LanguageContext';
 import { AuthProvider } from './context/AuthContext';
-import { LanguageProvider as TanyaLanguageProvider } from './components/dashboard/LanguageContext';
+import { LanguageProvider as AgriLanguageProvider } from './components/dashboard/LanguageContext';
 import { SidebarProvider } from './context/SidebarContext';
 
 import { OpenClawProvider } from './context/OpenClawContext';
 
-// Lazy-load Tanya Dashboard (isolated module)
+// Lazy-load Agri Dashboard (isolated module)
 const Dashboard = lazy(() => import('./pages/Dashboard'));
 
 import { ConnectivityProvider } from './context/ConnectivityContext';
@@ -29,7 +29,7 @@ function App() {
     <AuthProvider>
       <ConnectivityProvider>
         <UpstreamLanguageProvider>
-        <TanyaLanguageProvider>
+        <AgriLanguageProvider>
           <SidebarProvider>
             <Router>
               <OpenClawProvider>
@@ -41,7 +41,7 @@ function App() {
                     <Sidebar />
                     <main className="flex-1 transition-all duration-300 relative w-full overflow-hidden">
                       <Routes>
-                        {/* Tanya Dashboard — Now wrapped in the working global layout! */}
+                        {/* Agri Dashboard — Now wrapped in the working global layout! */}
                         <Route
                           path="/"
                           element={
@@ -72,7 +72,7 @@ function App() {
               </OpenClawProvider>
             </Router>
           </SidebarProvider>
-        </TanyaLanguageProvider>
+        </AgriLanguageProvider>
       </UpstreamLanguageProvider>
       </ConnectivityProvider>
     </AuthProvider>

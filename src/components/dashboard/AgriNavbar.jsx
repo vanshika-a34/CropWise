@@ -3,7 +3,7 @@ import { Leaf, Globe, User, Menu, X, ChevronDown } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
 
 /**
- * TanyaNavbar — Sticky top navigation bar for CropWise Dashboard.
+ * AgriNavbar — Sticky top navigation bar for CropWise Dashboard.
  * Features: logo, nav links, language selector, and profile icon.
  * Fully integrated with LanguageContext for multilingual support.
  */
@@ -12,15 +12,15 @@ const LANGUAGES = [
   'English', 'Hindi', 'Tamil', 'Telugu', 'Bengali', 'Marathi', 'Punjabi',
 ];
 
-export default function TanyaNavbar() {
+export default function AgriNavbar() {
   const { language, setLanguage, t } = useLanguage();
   const [langOpen, setLangOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const NAV_LINKS = [
-    { label: t('home'), href: '#tanya-hero' },
-    { label: t('features'), href: '#tanya-features' },
-    { label: t('weather'), href: '#tanya-weather' },
+    { label: t('home'), href: '#agri-hero' },
+    { label: t('features'), href: '#agri-features' },
+    { label: t('weather'), href: '#agri-weather' },
   ];
 
   /** @param {string} lang */
@@ -42,7 +42,7 @@ export default function TanyaNavbar() {
 
   return (
     <nav
-      id="tanya-navbar"
+      id="agri-navbar"
       className="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-[#0B1F1A]/80 border-b border-[#1FAF5A]/20"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

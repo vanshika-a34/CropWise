@@ -12,17 +12,17 @@ import {
   Cloud,
 } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
-import TanyaAlertBanner from './TanyaAlertBanner';
+import AgriAlertBanner from './AgriAlertBanner';
 
 /**
- * TanyaWeather — Live Weather Insights section.
+ * AgriWeather — Live Weather Insights section.
  * Fetches real-time data from the backend API (OpenWeatherMap → MongoDB).
  * Displays an interactive Leaflet map + weather stat cards + disaster alerts.
  */
 
 
 
-export default function TanyaWeather() {
+export default function AgriWeather() {
   const [visible, setVisible] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -62,7 +62,7 @@ export default function TanyaWeather() {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch(`/api/tanya/weather?lat=${userCoords.lat}&lon=${userCoords.lon}`);
+      const res = await fetch(`/api/agri/weather?lat=${userCoords.lat}&lon=${userCoords.lon}`);
       
       if (!res.ok) {
         throw new Error(`API error: ${res.status}`);
@@ -145,7 +145,7 @@ export default function TanyaWeather() {
 
   return (
     <section
-      id="tanya-weather"
+      id="agri-weather"
       ref={sectionRef}
       className="relative pt-10 pb-16 sm:pt-16 sm:pb-20 px-4 bg-[#0B1F1A]"
     >
@@ -179,7 +179,7 @@ export default function TanyaWeather() {
       {/* Disaster Alerts */}
       <div className="max-w-6xl mx-auto">
         {weatherData && weatherData.alerts && weatherData.alerts.length > 0 && (
-          <TanyaAlertBanner alerts={weatherData.alerts} />
+          <AgriAlertBanner alerts={weatherData.alerts} />
         )}
       </div>
 

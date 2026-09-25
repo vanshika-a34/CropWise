@@ -12,7 +12,7 @@ import {
 import { useLanguage } from './LanguageContext';
 
 /**
- * TanyaSoilHeatmap — Professional Soil Distribution & Crop Suitability Heatmap.
+ * AgriSoilHeatmap — Professional Soil Distribution & Crop Suitability Heatmap.
  * Displays a colorful grid representing soil types across regions.
  * Includes interactive tooltips for crop recommendations and disease risk.
  */
@@ -71,7 +71,7 @@ const HEATMAP_DATA = {
   '5-5': { suitability: 95, crop: 'Tea', disease: 'Low' },
 };
 
-export default function TanyaSoilHeatmap() {
+export default function AgriSoilHeatmap() {
   const [visible, setVisible] = useState(false);
   const [hoveredCell, setHoveredCell] = useState(null);
   const sectionRef = useRef(null);
@@ -127,7 +127,7 @@ export default function TanyaSoilHeatmap() {
 
   return (
     <section 
-      id="tanya-soil-heatmap"
+      id="agri-soil-heatmap"
       ref={sectionRef}
       className="relative pt-10 pb-20 sm:pt-12 sm:pb-28 px-4 bg-[#0B1F1A] overflow-hidden"
     >

@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useLanguage } from './LanguageContext';
-import heroBg from '../../assets/tanya/images/hero-bg.png';
+import heroBg from '../../assets/dashboard/images/hero-bg.png';
 
 /**
- * TanyaHero — Full-width hero section with farming background,
+ * AgriHero — Full-width hero section with farming background,
  * dark overlay, heading, subheading, and CTA button.
  * Fully integrated with LanguageContext for multilingual support.
  */
-export default function TanyaHero() {
+export default function AgriHero() {
   const [visible, setVisible] = useState(false);
   const { t } = useLanguage();
 
@@ -17,13 +17,13 @@ export default function TanyaHero() {
   }, []);
 
   const handleExploreClick = () => {
-    const el = document.getElementById('tanya-features');
+    const el = document.getElementById('agri-features');
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
     <section
-      id="tanya-hero"
+      id="agri-hero"
       className="relative w-full min-h-[90vh] flex items-center justify-center overflow-hidden"
     >
       {/* Background Image */}

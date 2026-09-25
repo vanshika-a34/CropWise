@@ -7,7 +7,7 @@ import authRoutes from './routes/authRoutes.js';
 import schemeRoutes from './routes/schemeRoutes.js';
 import aiRoutes from './routes/aiRoutes.js';
 import mongoose from 'mongoose';
-import tanyaWeatherRoutes from './tanya-dashboard/api/weatherRoutes.js';
+import agriWeatherRoutes from './agri-dashboard/api/weatherRoutes.js';
 
 // Setup for ES Modules __dirname equivalent
 const __filename = fileURLToPath(import.meta.url);
@@ -40,7 +40,7 @@ app.use((req: Request, res: Response, next) => {
 app.use('/api/auth', authRoutes);
 app.use('/api/schemes', schemeRoutes);
 app.use('/api/ai', aiRoutes);
-app.use('/api/tanya', tanyaWeatherRoutes);
+app.use('/api/agri', agriWeatherRoutes);
 app.use('/api/planner', plannerRoutes);
 app.use('/api', translationRoutes);
 

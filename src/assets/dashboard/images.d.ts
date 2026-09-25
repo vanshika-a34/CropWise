@@ -1,4 +1,4 @@
-// Type declarations for image assets used in tanya-dashboard
+// Type declarations for image assets used in agri-dashboard
 declare module '*.png' {
   const value: string;
   export default value;

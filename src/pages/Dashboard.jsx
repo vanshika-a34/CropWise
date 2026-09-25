@@ -1,14 +1,14 @@
 import React from 'react';
 import { LanguageProvider } from '../components/dashboard/LanguageContext';
-import TanyaNavbar from '../components/dashboard/TanyaNavbar';
-import TanyaHero from '../components/dashboard/TanyaHero';
-import TanyaFeatures from '../components/dashboard/TanyaFeatures';
-import TanyaWeather from '../components/dashboard/TanyaWeather';
-import TanyaSoilHeatmap from '../components/dashboard/TanyaSoilHeatmap';
-import TanyaFooter from '../components/dashboard/TanyaFooter';
+import AgriNavbar from '../components/dashboard/AgriNavbar';
+import AgriHero from '../components/dashboard/AgriHero';
+import AgriFeatures from '../components/dashboard/AgriFeatures';
+import AgriWeather from '../components/dashboard/AgriWeather';
+import AgriSoilHeatmap from '../components/dashboard/AgriSoilHeatmap';
+import AgriFooter from '../components/dashboard/AgriFooter';
 
 /**
- * TanyaDashboard — Main dashboard page that assembles all sections.
+ * AgriDashboard — Main dashboard page that assembles all sections.
  * Wrapped in LanguageProvider for multilingual support.
  * This page is fully self-contained and does not depend on
  * any existing components from the main app.
@@ -16,11 +16,11 @@ import TanyaFooter from '../components/dashboard/TanyaFooter';
 export default function Dashboard() {
   return (
     <div className="bg-[#0B1F1A] text-white font-outfit scroll-smooth">
-      <TanyaHero />
-      <TanyaFeatures />
-      <TanyaWeather />
-      <TanyaSoilHeatmap />
-      <TanyaFooter />
+      <AgriHero />
+      <AgriFeatures />
+      <AgriWeather />
+      <AgriSoilHeatmap />
+      <AgriFooter />
     </div>
   );
 }

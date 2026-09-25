@@ -2,13 +2,13 @@ import { Router, Request, Response } from 'express';
 import WeatherData from './WeatherModel.js';
 
 /**
- * Weather API Routes for Tanya Dashboard
+ * Weather API Routes for Agri Dashboard
  * 
- * GET /api/tanya/weather?lat=28.61&lon=77.21
+ * GET /api/agri/weather?lat=28.61&lon=77.21
  *   → Fetches real-time weather + forecast from OpenWeatherMap,
  *     detects disaster alerts, stores in MongoDB, returns JSON.
  * 
- * GET /api/tanya/weather/history?lat=28.61&lon=77.21&limit=10
+ * GET /api/agri/weather/history?lat=28.61&lon=77.21&limit=10
  *   → Returns recent weather records from MongoDB.
  */
 
@@ -121,7 +121,7 @@ function detectAlerts(current: any, forecast: any[]): any[] {
 }
 
 /**
- * GET /api/tanya/weather
+ * GET /api/agri/weather
  * Fetch real-time weather data from OpenWeatherMap
  */
 router.get('/weather', async (req: Request, res: Response) => {
@@ -214,7 +214,7 @@ router.get('/weather', async (req: Request, res: Response) => {
 });
 
 /**
- * GET /api/tanya/weather/history
+ * GET /api/agri/weather/history
  * Retrieve recent weather records from MongoDB
  */
 router.get('/weather/history', async (req: Request, res: Response) => {

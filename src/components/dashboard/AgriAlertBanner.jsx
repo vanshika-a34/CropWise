@@ -12,7 +12,7 @@ import {
 import { useLanguage } from './LanguageContext';
 
 /**
- * TanyaAlertBanner — Displays weather disaster alerts.
+ * AgriAlertBanner — Displays weather disaster alerts.
  * Color-coded by severity: Extreme (red), Severe (orange), Moderate (yellow), Minor (blue).
  */
 
@@ -63,7 +63,7 @@ function getAlertIcon(event) {
 }
 
 /** @param {{ alerts: any[] }} props */
-export default function TanyaAlertBanner({ alerts = [] }) {
+export default function AgriAlertBanner({ alerts = [] }) {
   /** @type {any} */
   const [dismissed, setDismissed] = useState({});
 

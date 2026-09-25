@@ -237,8 +237,8 @@ CropWise/
 ## Clone Repository
 
 ```bash
-git clone https://github.com/sRiSh-JaNa-tech/CropWise_SiliCoders.git
-cd CropWise_SiliCoders
+git clone https://github.com/vanshika-a34/CropWise.git
+cd CropWise
 ```
 
 ---
@@ -288,6 +288,6 @@ npm start
 
 ---
 
-# Team Silicoders
+# CropWise
 
 Built with the vision of making AI accessible to every farmer regardless of connectivity, language, or technical literacy.

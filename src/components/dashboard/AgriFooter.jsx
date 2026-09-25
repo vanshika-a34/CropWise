@@ -3,7 +3,7 @@ import { Leaf, Github, Twitter, Linkedin, Heart } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
 
 /**
- * TanyaFooter — Dark footer with heart message, links, and social icons.
+ * AgriFooter — Dark footer with heart message, links, and social icons.
  * Fully integrated with LanguageContext for multilingual support.
  */
 
@@ -13,7 +13,7 @@ const SOCIAL_ICONS = [
   { icon: Linkedin, href: '#', label: 'LinkedIn' },
 ];
 
-export default function TanyaFooter() {
+export default function AgriFooter() {
   const { t } = useLanguage();
 
   const FOOTER_LINKS = [

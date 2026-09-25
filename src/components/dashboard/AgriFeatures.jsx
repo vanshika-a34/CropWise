@@ -4,12 +4,12 @@ import { useNavigate } from 'react-router-dom';
 import { useLanguage } from './LanguageContext';
 
 /**
- * TanyaFeatures — 4-card responsive grid showcasing key CropWise features.
+ * AgriFeatures — 4-card responsive grid showcasing key CropWise features.
  * Cards have hover glow + scale effects and scroll-triggered fade-in.
  * Fully integrated with LanguageContext for multilingual support.
  */
 
-export default function TanyaFeatures() {
+export default function AgriFeatures() {
   const [visible, setVisible] = useState(false);
   const sectionRef = useRef(null);
   const { t } = useLanguage();
@@ -55,7 +55,7 @@ export default function TanyaFeatures() {
 
   return (
     <section
-      id="tanya-features"
+      id="agri-features"
       ref={sectionRef}
       className="relative py-20 sm:py-28 px-4 bg-[#0B1F1A]"
     >
